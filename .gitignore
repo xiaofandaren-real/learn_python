@@ -1,0 +1,52 @@
+# ==========================================
+# Poetry & Environment (环境与依赖忽略)
+# ==========================================
+# 本地虚拟环境目录（如果开启了 virtualenvs.in-project = true）
+.venv/
+venv/
+ENV/
+
+# 环境变量与敏感配置
+.env
+.env.local
+.env.*.local
+
+# Poetry 缓存与构建产物
+.poetry/
+dist/
+build/
+*.egg-info/
+
+# ==========================================
+# Python Standard Ignores (Python 标准忽略项)
+# ==========================================
+# 字节码与缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C 扩展编译产物
+*.so
+
+# 测试与代码质量工具缓存 (Pytest, Coverage, MyPy, Ruff)
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ==========================================
+# IDE & System (编辑器与系统临时文件)
+# ==========================================
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# JetBrains (PyCharm / IntelliJ)
+.idea/
+
+# macOS / Windows 系统文件
+.DS_Store
+Thumbs.db
