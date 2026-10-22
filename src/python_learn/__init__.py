@@ -8,6 +8,88 @@
 ## 函数
 ######################################################################
 
+## 字符串操作
+name = "范晓龙"
+print(f"我的姓名是{name}")
+print(f"{name} is {len(name)} characters long")
+name = "fanxiaolong"
+print(f"{name} is {len(name)} characters long")
+
+# None,0,空字符串，空列表，空字典，空元组都算是false
+# 所有其他值都是True
+if(bool(None)):
+    print("是真的")
+else:
+    print("是假的")
+bool(0)
+bool("")
+bool([])
+bool({})
+bool(())
+
+# 用列表(list)存储序列
+li = []
+li.append(1)
+li.append(2)
+li.append("我是谁")
+for ele in li:
+    print("列表元素：{}".format(ele))
+
+# 用pop从列表尾部删除
+li.pop()
+for ele in li:
+    print("删除后还剩：{}".format(ele))
+
+li.append("a")
+li.append("b")
+li.append("c")
+# 取出最后一个元素
+var = li[-1]
+print("最后一个元素：{}".format(var))
+# 可以用三个参数的组合来构建切割
+# li[始:终:步伐]
+tmpLi = li[1:3]
+print(*tmpLi)
+# 取到结尾
+print(*li[2:])
+# 从头开始取
+print(*li[:3])
+# 隔一个取一个
+print("隔一个取一个")
+print(*li[::2])
+# 倒排列表，负数代表反向走，从右向左，从尾到头。正数代表正向走，从左往右，从头到尾。
+print("倒排列表")
+print(*li[::-1])
+# 倒着隔一个取一个
+print(*li[::-2])
+
+# 用del删除任何一个元素
+del li[2]
+print("删除序号为2的元素")
+print(*li)
+# 用remove删除第一个匹配的元素
+li.remove(2)
+print("使用remove删除第一个匹配的元素")
+print(*li)
+# insert 在指定索引处插入一个新的元素
+print("在指定索引处插入一个新的元素")
+li.insert(1,2)
+li.insert(2,"a")
+print(*li)
+
+# index 获取列表第一个匹配的值的索引
+print("2的索引是：{}".format(li.index(2)))
+
+# 合并列表，+ 会产生一个新的列表，不会影响原有的列表
+li2 = ["aa","bb","cc"]
+li3 = li + li2
+print("合并后的列表")
+print(*li3)
+
+# extend 拼接列表
+li.extend(li2)
+print(*li)
+
 #用def定义新函数
 def add(x,y):
     print("x is {} and y is {}".format(x,y))
@@ -32,3 +114,5 @@ def keyword_args(**kwargs):
     return kwargs
 
 kvalue = keyword_args(big="foot",loch="ness")
+# for ele in kvalue:
+#     print("key是{},value是{}".)
