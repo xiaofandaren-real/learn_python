@@ -90,6 +90,31 @@ print(*li3)
 li.extend(li2)
 print(*li)
 
+#############################################################
+## 学习一下元组 tup
+#############################################################
+# 元组类似列表，但是不允许修改
+tup1 = (1,2,3)
+print("元组的第一个元素:{}".format(tup1[0]))
+
+# 如果元组的数量为1 ，必须在元素之后加一个逗号
+# 其他元素数量的元组，包括空元组都不需要
+type_name1 = type((1))
+print("类型是：{}".format(type_name1))
+type_name2 = type(2)
+print("类型是：{}".format(type_name2))
+
+#列表允许的操作元组大多都可以
+len(tup1)
+tup2 = tup1 + (4,5,6)
+print("新的元组是：")
+print(*tup2)
+
+if(2 in tup2):
+    print("tup2 元组包含2")
+else:
+    print("tup2 元组不包含2")
+
 #用def定义新函数
 def add(x,y):
     print("x is {} and y is {}".format(x,y))
